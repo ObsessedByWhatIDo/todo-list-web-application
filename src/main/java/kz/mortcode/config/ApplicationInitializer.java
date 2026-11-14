@@ -1,4 +1,4 @@
-package ru.codekitchen.config;
+package kz.mortcode.config;
 
 import jakarta.servlet.ServletContext;
 

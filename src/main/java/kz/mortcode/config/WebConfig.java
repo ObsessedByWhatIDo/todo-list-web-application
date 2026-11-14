@@ -1,4 +1,4 @@
-package ru.codekitchen.config;
+package kz.mortcode.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
