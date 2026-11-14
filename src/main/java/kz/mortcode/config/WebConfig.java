@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ru.codekitchen")
+@ComponentScan("kz.mortcode")
 public class WebConfig implements WebMvcConfigurer {
 
     @Bean(name = "viewResolver")
