@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>ToDo List</title>
@@ -9,25 +9,25 @@
 <div class="page-wrapper">
     <div class="container">
         <div class="header-container">
-            <div class="header-text">
+            <div class="header__text">
                 <h2>ToDo List</h2>
             </div>
-            <div class="header-statistics">
+            <div class="header__statistics">
                 <span>${numberOfActiveRecords} more to do, ${numberOfDoneRecords} done</span>
             </div>
         </div>
         <div class="filter-container">
             <form class="filter-form">
-                <div class="filter-form-input">
-                    <input type="radio" id="filter-form__status_all" name"filter" value="all" checked>
+                <div class="filter-form__input">
+                    <input type="radio" id="filter-form__status_all" name="filter" value="all" checked>
                     <label for="filter-form__status_all">All</label>
                 </div>
                 <div class="filter-form__input">
                     <input type="radio" id="filter-form__status_active" name="filter" value="active">
                     <label for="filter-form__status_active">Active</label>
                 </div>
-                <div class="filter-for__input">
-                    <input type="radio" id="filter-form__status_done" name"filter" value="done">
+                <div class="filter-form__input">
+                    <input type="radio" id="filter-form__status_done" name="filter" value="done">
                     <label for="filter-form__status_done">Done</label>
                 </div>
                 <button type="submit">Apply</button>
@@ -35,9 +35,9 @@
         </div>
         <div class="records-container">
             <div class="record">
-                <div class="record-title"><span>Learn Programming</span></div>
+                <div class="record__title"><span>Learn Programming</span></div>
                 <div class="record__controls">
-                    <form class="record__controls_form">
+                    <form class="record__controls-form">
                         <button type="submit" class="button_type_approve">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_258_5036)">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="record">
-                    <div class="record-title"><span class="record__title_strikethrough">Be happy</span></div>
+                    <div class="record__title"><span class="record__title_strikethrough">Be happy</span></div>
                     <div class="record__controls">
                         <form class="record__controls-form">
                             <button type="submit" class="button_type_close">
@@ -73,9 +73,9 @@
                     </div>
                 </div>
                 <div class="record">
-                    <div class="record-title"><span>Learn Programming</span></div>
+                    <div class="record__title"><span>Workout</span></div>
                     <div class="record__controls">
-                        <form class="record__controls_form">
+                        <form class="record__controls-form">
                             <button type="submit" class="button_type_approve">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_258_5036)">
