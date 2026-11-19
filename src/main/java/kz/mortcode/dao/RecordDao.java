@@ -21,4 +21,21 @@ public class RecordDao {
     public List<Record> findAllRecords(){
         return new ArrayList<>(records);
     }
+
+    public void saveRecord(Record record) {
+        records.add(record);
+    }
+
+    public void updateRecordStatus(int id, RecordStatus newStatus){
+        for(Record item : records){
+            if (item.getId() == id) {
+                item.setStatus(newStatus);
+                break;
+            }
+        }
+    }
+
+    public void deleteRecord(int id){
+        records.removeIf(item -> item.getId() == id);
+    }
 }
