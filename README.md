@@ -43,3 +43,10 @@ src/main/webapp/WEB-INF/views  — JSP-страницы
 - Слои Controller → Service → DAO. `@Service` и `@Repository` это `@Component` с меткой
 - DAO отдаёт копию списка, но поверхностную: `setStatus` меняет оригинал
 - `Model` → `${ключ}` в JSP подставляется на сервере при каждом запросе
+
+## Урок 9
+- JSTL: `<c:forEach items="${records}" var="record">`, `<c:if test>`, `<c:choose>` с `<c:when>` и `<c:otherwise>`. Нужны зависимость в pom.xml и `taglib` в начале JSP
+- `@RequestParam` связывает query-параметр или поле формы с аргументом метода. Имена совпадают, иначе `name = "..."`
+- Формы, меняющие состояние, отправляем POST. Какую запись менять, передаём через `<input type="hidden" name="id">`
+- После POST делаем `redirect:/home`: адрес не меняется, логика отрисовки остаётся в одном методе
+- Записи идентифицируем по уникальному `id`, а не по `title`: дубликаты ломали и «выполнить», и «удалить»
