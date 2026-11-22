@@ -1,8 +1,7 @@
 package kz.mortcode.controller;
 
-import kz.mortcode.entity.dto.RecordsContainerDto;
+import kz.mortcode.dto.RecordsContainerDto;
 import kz.mortcode.service.RecordService;
-import kz.mortcode.entity.Record;
 import kz.mortcode.entity.RecordStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-import java.util.List;
 
 @Controller
 public class CommonController {

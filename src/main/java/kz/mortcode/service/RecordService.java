@@ -3,14 +3,13 @@ package kz.mortcode.service;
 import kz.mortcode.dao.RecordDao;
 import kz.mortcode.entity.Record;
 import kz.mortcode.entity.RecordStatus;
-import kz.mortcode.entity.dto.RecordsContainerDto;
+import kz.mortcode.dto.RecordsContainerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.stream.Collectors;
 
 @Service
 public class RecordService {

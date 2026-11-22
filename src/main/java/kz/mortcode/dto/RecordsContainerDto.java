@@ -1,4 +1,4 @@
-package kz.mortcode.entity.dto;
+package kz.mortcode.dto;
 
 import kz.mortcode.entity.Record;
 import java.util.List;
