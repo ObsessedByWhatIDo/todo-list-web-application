@@ -12,7 +12,6 @@
     <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
     <jakarta.servlet.jsp.jstl.version>3.0.1</jakarta.servlet.jsp.jstl.version>
     <jakarta.servlet.jsp.jstl-api.version>3.0.0</jakarta.servlet.jsp.jstl-api.version>
-    <javax.jstl.version>1.2</javax.jstl.version>
   </properties>
 
   <dependencies>

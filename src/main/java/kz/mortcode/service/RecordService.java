@@ -1,4 +1,4 @@
-package kz.mortcode.Service;
+package kz.mortcode.service;
 
 import kz.mortcode.dao.RecordDao;
 import kz.mortcode.entity.Record;

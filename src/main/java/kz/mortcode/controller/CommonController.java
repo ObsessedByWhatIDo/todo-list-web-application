@@ -1,6 +1,6 @@
 package kz.mortcode.controller;
 
-import kz.mortcode.Service.RecordService;
+import kz.mortcode.service.RecordService;
 import kz.mortcode.entity.Record;
 import kz.mortcode.entity.RecordStatus;
 import org.springframework.beans.factory.annotation.Autowired;
