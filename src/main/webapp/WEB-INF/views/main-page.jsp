@@ -40,7 +40,7 @@
                 <c:when test="${not empty records}">
                     <c:forEach items="${records}" var="record">
                         <div class="record">
-                            <div class="record__title"><span class="${record.status == 'DONE' ? 'record__title_strikethrough' : ''}"><c:out value="${record.title}"</span></div>
+                            <div class="record__title"><span class="${record.status == 'DONE' ? 'record__title_strikethrough' : ''}"><c:out value="${record.title}"/></span></div>
                             <div class="record__controls">
                                 <c:if test="${record.status == 'ACTIVE'}">
                                     <form action="/make-record-done" method="post" class="record__controls-form">
