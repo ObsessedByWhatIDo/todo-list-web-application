@@ -1,5 +1,6 @@
 package kz.mortcode.controller;
 
+import kz.mortcode.entity.dto.RecordsContainerDto;
 import kz.mortcode.service.RecordService;
 import kz.mortcode.entity.Record;
 import kz.mortcode.entity.RecordStatus;
@@ -28,13 +29,11 @@ public class CommonController {
     }
 
     @RequestMapping("/home")
-    public String showHomePage(Model model){
-        List<Record> records = recordService.findAllRecords();
-        int numberOfDoneRecords = (int) records.stream().filter(record -> record.getStatus() == RecordStatus.DONE).count();
-        int numberOfActiveRecords = (int) records.stream().filter(record -> record.getStatus() == RecordStatus.ACTIVE).count();
-        model.addAttribute("records", records);
-        model.addAttribute("numberOfDoneRecords", numberOfDoneRecords);
-        model.addAttribute("numberOfActiveRecords", numberOfActiveRecords);
+    public String showHomePage(Model model, @RequestParam(name = "filter", required = false) String filterMode){
+        RecordsContainerDto container = recordService.findAllRecords(filterMode);
+        model.addAttribute("records", container.getRecords());
+        model.addAttribute("numberOfDoneRecords", container.getNumberOfDoneRecords());
+        model.addAttribute("numberOfActiveRecords", container.getNumberOfActiveRecords());
         return "main-page";
     }
 
@@ -45,14 +44,16 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/make-record-done", method = RequestMethod.POST)
-    public String makeRecordDone(@RequestParam int id) {
+    public String makeRecordDone(@RequestParam int id,
+                                 @RequestParam(name = "filter", required = false) String filterMode) {
         recordService.updateRecordStatus(id, RecordStatus.DONE);
-        return "redirect:/home";
+        return "redirect:/home" + (filterMode != null && !filterMode.isBlank() ?  "?filter=" + filterMode : "");
     }
 
     @RequestMapping(value = "/delete-record", method = RequestMethod.POST)
-    public String deleteRecord(@RequestParam int id) {
+    public String deleteRecord(@RequestParam int id,
+                               @RequestParam(name = "filter", required = false) String filterMode) {
         recordService.deleteRecord(id);
-        return "redirect:/home";
+        return "redirect:/home" + (filterMode != null && !filterMode.isBlank() ?  "?filter=" + filterMode : "");
     }
 }
